@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class New_preject(models.Model):
+class New_project(models.Model):
     file_name = models.TextField('file_name')
     file_size = models.IntegerField('file_size')
     format_file = models.CharField('format_file', max_length=25)
@@ -10,6 +10,9 @@ class New_preject(models.Model):
 
     def __str__(self):
         return self.file_name
+
+    def get_absolute_url(self):
+        return f'/{self.id}'
 
     class Meta:
         verbose_name = 'News'

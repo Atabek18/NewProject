@@ -1,0 +1,12 @@
+
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ converter.file_name }}{% endblock %}
+
+{% block content %}
+        <div class="new">
+            <h1>{{ converter.file_name }}</h1>
+          <p>{{ converter.file_size }}</p>
+          <p>{{ converter.some_info }}</p>
+        </div>
+{% endblock %}

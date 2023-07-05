@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Add new info{% endblock %}
+
+{% block content %}
+        <div class="new">
+            <h1>Add New information</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.file_name }}
+                {{ form.file_size }}
+                {{ form.some_info }}
+                <span>{{ error }}</span>
+                <button class="btn btn-success" type="submit">Add New</button>
+            </form>
+        </div>
+{% endblock %}

@@ -5,4 +5,20 @@
 {% block content %}
     <h1>New page</h1>
     <p>New page</p>
+    {% for i in news %}
+        <div class="new">
+            <h1>
+                <br>
+                {{ i.file_name }}
+                <br>
+                {{ i.file_size }}
+                <br>
+                {{ i.format_file }}
+                <br>
+                {{ i.changed_format }}
+                <br>
+                {{ i.some_info }}
+            </h1>
+        </div>
+    {% endfor %}
 {% endblock %}
